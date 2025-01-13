@@ -159,7 +159,7 @@
     <div class="container">
         <div class="row">
 
-            <!-- LMAOCaT Project -->
+            <!-- Project Template -->
             <div class="project shadow-large">
                 <div class="project-image">
                     <img src="images/project.jpg" />
@@ -177,7 +177,6 @@
                 </div>
             </div>
 
-            <!-- Geo-political ML Project -->
             <div class="project shadow-large">
                 <div class="project-image">
                     <img src="images/project.jpg" />
@@ -195,99 +194,13 @@
                 </div>
             </div>
 
-            <!-- Statistical Learning Project -->
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/project.jpg" />
-                </div>
-                <div class="project-info">
-                    <h3>Statistical Learning and Linear Regression using R</h3>
-                    <p>
-                        <ul>
-                            <li>Implemented statistical methods in R, conducting hypothesis testing and using VIF diagnostics for model validity.</li>
-                            <li>Applied GLS for autocorrelation and enhanced specifications with polynomial regression.</li>
-                            <li>Analyzed data using Box-Cox transformations and studied lasso and ridge differences.</li>
-                        </ul>
-                    </p>
-                    <button onclick="openModal('project3')">View Project</button>
-                </div>
-            </div>
-
-            <!-- Bangalore House Price Predictor -->
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/project.jpg" />
-                </div>
-                <div class="project-info">
-                    <h3>Bangalore House Price Predictor</h3>
-                    <p>
-                        <ul>
-                            <li>Built a multi-input CNN to predict housing prices, scraping data using BeautifulSoup and curating datasets.</li>
-                            <li>Performed EDA, descriptive analysis, and data visualization using Python libraries.</li>
-                            <li>Presented findings at ICAISC conference.</li>
-                        </ul>
-                    </p>
-                    <button onclick="openModal('project4')">View Project</button>
-                </div>
-            </div>
-
-            <!-- Blind-motion Image Deblurring -->
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/project.jpg" />
-                </div>
-                <div class="project-info">
-                    <h3>Blind-motion Image Deblurring</h3>
-                    <p>
-                        <ul>
-                            <li>Developed an attention-based architecture achieving 92.6% accuracy for restoring blurred images.</li>
-                            <li>Incorporated UNet-based encoder-decoder and channel attention subnetworks.</li>
-                            <li>Integrated OCR for license plate recognition systems.</li>
-                        </ul>
-                    </p>
-                    <button onclick="openModal('project5')">View Project</button>
-                </div>
-            </div>
-
-            <!-- Optical Character Recognition and Machine Translation -->
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/project.jpg" />
-                </div>
-                <div class="project-info">
-                    <h3>Optical Character Recognition and Machine Translation</h3>
-                    <p>
-                        <ul>
-                            <li>Created an end-to-end application for extracting and translating text from images using Seq2Seq LSTM models and attention mechanisms.</li>
-                            <li>Achieved a BLEU score of 31, earning the highest grade for this curriculum project.</li>
-                        </ul>
-                    </p>
-                    <button onclick="openModal('project6')">View Project</button>
-                </div>
-            </div>
-
-            <!-- Panacea Hospital Data Volunteer -->
-            <div class="project shadow-large">
-                <div class="project-image">
-                    <img src="images/project.jpg" />
-                </div>
-                <div class="project-info">
-                    <h3>Panacea Hospital Data Volunteer</h3>
-                    <p>
-                        <ul>
-                            <li>Collected and cleaned five years of encrypted patient data for analysis.</li>
-                            <li>Built interactive visualizations to uncover disease patterns and seasonal trends.</li>
-                            <li>Aided in targeted ad campaigns to increase patient visits.</li>
-                        </ul>
-                    </p>
-                    <button onclick="openModal('project7')">View Project</button>
-                </div>
-            </div>
+            <!-- Add other projects here in the same format -->
 
         </div>
     </div>
 </div>
 
+<!-- Modals -->
 <!-- Modals -->
 <div id="project1" class="modal">
     <div class="modal-content">
@@ -317,9 +230,76 @@
     </div>
 </div>
 
-<!-- Repeat modals for other projects as shown -->
+<div id="project3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project3')">&times;</span>
+        <h2>Statistical Learning and Linear Regression using R</h2>
+        <p>
+            <ul>
+                <li>Implemented statistical methods in R, conducting hypothesis testing and using VIF diagnostics for model validity.</li>
+                <li>Applied GLS for autocorrelation and enhanced specifications with polynomial regression.</li>
+                <li>Analyzed data using Box-Cox transformations and studied lasso and ridge differences.</li>
+            </ul>
+        </p>
+    </div>
+</div>
 
-<!-- Modal Styles and Script -->
+<div id="project4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project4')">&times;</span>
+        <h2>Bangalore House Price Predictor</h2>
+        <p>
+            <ul>
+                <li>Built a multi-input CNN to predict housing prices, scraping data using BeautifulSoup and curating datasets.</li>
+                <li>Performed EDA, descriptive analysis, and data visualization using Python libraries.</li>
+                <li>Presented findings at ICAISC conference.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<div id="project5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project5')">&times;</span>
+        <h2>Blind-motion Image Deblurring</h2>
+        <p>
+            <ul>
+                <li>Developed an attention-based architecture achieving 92.6% accuracy for restoring blurred images.</li>
+                <li>Incorporated UNet-based encoder-decoder and channel attention subnetworks.</li>
+                <li>Integrated OCR for license plate recognition systems.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<div id="project6" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project6')">&times;</span>
+        <h2>Optical Character Recognition and Machine Translation</h2>
+        <p>
+            <ul>
+                <li>Created an end-to-end application for extracting and translating text from images using Seq2Seq LSTM models and attention mechanisms.</li>
+                <li>Achieved a BLEU score of 31, earning the highest grade for this curriculum project.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<div id="project7" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project7')">&times;</span>
+        <h2>Panacea Hospital Data Volunteer</h2>
+        <p>
+            <ul>
+                <li>Collected and cleaned five years of encrypted patient data for analysis.</li>
+                <li>Built interactive visualizations to uncover disease patterns and seasonal trends.</li>
+                <li>Aided in targeted ad campaigns to increase patient visits.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<!-- Modal Styles -->
 <style>
     .modal {
         display: none;
@@ -357,6 +337,7 @@
     }
 </style>
 
+<!-- Modal Script -->
 <script>
     function openModal(modalId) {
         document.getElementById(modalId).style.display = "block";
@@ -367,7 +348,6 @@
     }
 </script>
 
-<!-- End #projects -->
 
 
     <div id="skills">
