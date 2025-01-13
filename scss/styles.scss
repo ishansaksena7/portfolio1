@@ -652,19 +652,17 @@ footer {
 }
 
 .project-image {
-    flex: 0 0 30%; /* Images take 30% of the width */
-    max-width: 30%;
-    height: auto; /* Maintain aspect ratio */
-    overflow: hidden; /* Prevent overflow */
-    border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+    width: 100%; /* Ensures the container spans the full width */
+    height: 200px; /* Explicit height for consistent image box */
+    overflow: hidden; /* Ensures any overflow content is cropped */
+    border-radius: 4px 4px 0 0; /* Rounded top corners for the box */
 }
 
 .project-image img {
-    width: 100%;
-    height: 100%; /* Make it fit the height of the container */
-    display: block;
-    object-fit: cover; /* Ensures the image fills the container proportionally */
-    object-position: center; /* Centers the image if cropping occurs */
+    width: 100%; /* Image spans full width of the container */
+    height: 100%; /* Image spans full height of the container */
+    object-fit: cover; /* Crops the image to fill the box without distortion */
+    object-position: center; /* Ensures the central part of the image is visible */
 }
 
 
