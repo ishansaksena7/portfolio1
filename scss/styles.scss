@@ -631,13 +631,13 @@ footer {
 */
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid #ddd; /* Replace $border with a color value */
+    border-bottom: 1px solid $border;
     text-align: center;
-}
 
-#projects h2 {
-    color: #333; /* Replace $heading with a color value */
-    margin-bottom: 50px;
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
 }
 
 .project {
@@ -647,43 +647,46 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    display: flex; // Flexbox for layout
+    flex-wrap: wrap; // Allow wrapping for small screens
+    align-items: stretch; // Ensure content and image align properly
 }
 
 .project-image {
-    width: 100%; /* Ensures the container spans the full width */
-    height: 200px; /* Explicit height for consistent image box */
-    overflow: hidden; /* Ensures any overflow content is cropped */
-    border-radius: 4px 4px 0 0; /* Rounded top corners for the box */
+    width: 30%; // Image takes up 30% of the width
+    height: auto; // Maintain aspect ratio
+    overflow: hidden; // Crop overflow content
+    border-radius: 4px 0 0 4px; // Rounded corners
+    display: flex; // Ensures proper alignment for image
+    align-items: center;
+    justify-content: center;
 }
 
 .project-image img {
-    width: 100%; /* Image spans full width of the container */
-    height: 100%; /* Image spans full height of the container */
-    object-fit: cover; /* Crops the image to fill the box without distortion */
-    object-position: center; /* Ensures the central part of the image is visible */
+    width: 100%;
+    height: 100%; // Fill the container
+    object-fit: cover; // Ensures the image fits without distortion
+    object-position: center; // Focus on the center of the image
 }
-
 
 .project-info {
-    flex: 1; /* Take up remaining space */
+    flex: 1; // Take up remaining space
     padding: 20px;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box; // Include padding in width calculation
     text-align: left;
-}
 
-.project-info h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #333; /* Replace $heading with a color value */
-    margin: 0 0 15px 0;
-}
+    h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        color: $heading;
+        margin: 0 0 15px 0;
+    }
 
-.project-info p {
-    color: #555; /* Replace $text with a color value */
-    margin: 0 0 15px 0;
-    font-size: 0.9em;
+    p {
+        color: $text;
+        margin: 0 0 15px 0;
+        font-size: 0.9em;
+    }
 }
 
 .no-image .project-info {
@@ -693,8 +696,21 @@ footer {
     transform: none;
 }
 
-#more-projects {
-    display: none;
+@media only screen and (max-width: 768px) {
+    .project {
+        flex-direction: column; // Stack content vertically on small screens
+    }
+
+    .project-image {
+        width: 100%; // Image takes full width
+        height: 200px; // Set fixed height for images on small screens
+        border-radius: 4px 4px 0 0; // Adjust rounded corners
+    }
+
+    .project-info {
+        padding: 20px 15px;
+        text-align: center; // Center text on smaller screens
+    }
 }
 
 
