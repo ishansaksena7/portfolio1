@@ -629,16 +629,15 @@ footer {
     ----- 8. Project Styles -----
     -------------------------------
 */
-
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid #ddd; /* Replace $border with a color value */
     text-align: center;
+}
 
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
-    }
+#projects h2 {
+    color: #333; /* Replace $heading with a color value */
+    margin-bottom: 50px;
 }
 
 .project {
@@ -648,45 +647,55 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .project-image {
-    float: left;
+    flex: 0 0 30%; /* Images take 30% of the width */
+    max-width: 30%;
+    height: auto; /* Maintain aspect ratio */
+    overflow: hidden; /* Prevent overflow */
+    border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+}
+
+.project-image img {
+    width: 100%;
+    height: auto; /* Maintain image aspect ratio */
+    display: block;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
-
-    h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        color: $heading;
-        margin: 0 0 15px 0;
-    }
-
-    p {
-        color: $text;
-        margin: 0 0 15px 0;
-        font-size: 0.9em;
-    }
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width */
+    text-align: left;
 }
 
-.no-image {
-    .project-info {
-        position: relative;
-        margin: 0;
-        padding: 30px 15px;
-        transform: none;
-    }
+.project-info h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #333; /* Replace $heading with a color value */
+    margin: 0 0 15px 0;
+}
+
+.project-info p {
+    color: #555; /* Replace $text with a color value */
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+}
+
+.no-image .project-info {
+    position: relative;
+    margin: 0;
+    padding: 30px 15px;
+    transform: none;
 }
 
 #more-projects {
     display: none;
 }
+
 
 /*
     -------------------------------
